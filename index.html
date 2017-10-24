@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="assets/js/lib/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/lib/paper-full.js"></script>    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,700" rel="stylesheet">         
+        <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstyle.css"> -->
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <script type="text/paperscript" canvas="myCanvas">
+   
+            var centre = new Point(300,145);
+            var animationOn = false;
+
+            var visualDescriptors = [
+            {
+                offsetAngle: 150,
+                arcAngle: 280,
+                radius: 30,
+                colour: "yellow",
+                width: 30
+            },
+            {
+                offsetAngle: 50,
+                arcAngle: 80,
+                radius: 70,
+                colour: "green" 
+            },
+            {
+                offsetAngle: 170,
+                arcAngle: 80,
+                radius: 70,
+                colour: "green" 
+            },
+            {
+                offsetAngle: 290,
+                arcAngle: 80,
+                radius: 70,
+                colour: "green" 
+            },
+            {
+                offsetAngle: 100,
+                arcAngle: 90,
+                radius: 110,
+                colour: "red",
+                width: 30 
+            },
+            {
+                offsetAngle: 230,
+                arcAngle: 30,
+                radius: 100,
+                colour: "red" 
+            },
+            {
+                offsetAngle: 300,
+                arcAngle: 30,
+                radius: 100,
+                colour: "red" 
+            }];
+
+            var allPaths = [];
+
+            function visualize(myObj)
+            {
+                var fromX = Math.floor(myObj.radius * Math.cos(myObj.offsetAngle * Math.PI/180));
+                var fromY = Math.floor(myObj.radius * Math.sin(myObj.offsetAngle * Math.PI/180));
+    
+                var from = new Point(fromX, fromY);
+                
+                var throughX = Math.floor(myObj.radius * Math.cos((myObj.offsetAngle + myObj.arcAngle/2) * Math.PI/180));
+                var throughY = Math.floor(myObj.radius * Math.sin((myObj.offsetAngle + myObj.arcAngle/2) * Math.PI/180));
+    
+                var through = new Point(throughX, throughY);
+    
+                var toX = Math.floor(myObj.radius * Math.cos((myObj.offsetAngle + myObj.arcAngle) * Math.PI/180));
+                var toY = Math.floor(myObj.radius * Math.sin((myObj.offsetAngle + myObj.arcAngle) * Math.PI/180));
+    
+                var to = new Point(toX, toY);
+    
+                var path1 = new Path.Arc(from + centre, through + centre, to + centre);
+                path1.strokeColor = myObj.colour;
+
+                if(myObj.width)
+                {
+                    path1.strokeWidth = myObj.width;
+                }
+                else
+                {
+                    path1.strokeWidth = 20;
+                }
+
+                allPaths.push(path1);
+                
+            }
+
+            visualDescriptors.forEach(visualize);
+
+            function onFrame(event)
+            {
+                rotateShapes();
+            }
+
+            function rotateShapes()
+            {
+                if(animationOn)
+                {
+                    allPaths[0].rotate(1.2, centre);
+                    allPaths[1].rotate(-1, centre);
+                    allPaths[2].rotate(-1, centre);
+                    allPaths[3].rotate(-1, centre);
+                    allPaths[4].rotate(0.8, centre);
+                    allPaths[5].rotate(0.8, centre);
+                    allPaths[6].rotate(0.8, centre);
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-tower" aria-hidden="true"></span> Utkarsh Gaur</a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="skilltree.html">Skills</a></li>
+                    <li><a href="bosses.html">Projects</a></li>
+                    <li><a href="XP.html">Professional Experience</a></li>    
+                    <li><a href="ingamechat.html">Contact</a></li>  
+                    <li><a href="Games/xmy/index.html" target="_blank">Game Link</a></li>     
+                </ul>
+                <!--
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>        
+                    
+                </ul>
+            -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            </nav>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container wrapper">
+        <button type="button" class="btn btn-default" id="colourFlip">Change Colour Scheme</button>
+        <div class="row">
+        <h1>Oh hey, you found me!</h1>
+        </div>
+        <div class="row">
+        <div class="col-md-6">        
+        <p> My name is Utkarsh Gaur.*  </p>
+        
+        <p> I am a Computer Engineer by training. By practice, well, let's just say it goes well beyond Computer Engineering. 4 parts Problem Solver, 3 parts Toastmaster, 3 parts Designer and Creator, then throw in a dash of biking, and a hearty portion of foodie-tendencies, and you start making something that resembles me. </p>
+
+        <p> Currently I'm focusing on being a game and web developer. No big deal, right? Feel free to explore the site to get a better idea of my experiences and interests.</p>
+        </div>
+        <div class="col-md-6"> 
+        <!-- <canvas id="myCanvas" resize="true"></canvas> -->
+        <canvas id="myCanvas" resize="true"></canvas>
+        </div>
+    </div>
+        </div>
+        
+        <div class="container">
+        <div class="row footer">
+        <div class="col-md-6 col-sm-10" >  
+        <button type="button" class="btn btn-default" id="pronounce">* "Am I saying your name correctly?"</button>
+        <div id="pronounceText">
+        <p> *People get a bit of pronounciation anxiety when they have to say my name out loud. I'm quite chill about it though. You can pronounce it any way you like. Not even my closest friends have consensus on how to say it.
+            
+            But if you are really curious, then here's the proper way - 
+            <ul>
+            <li>"Ut":  'u' is a quick 'oo' sound like in "soot". The 't' is the soft french version. But if your french is rusty, just go with "soot" without the "s"
+            </li>
+            <li>"karsh":  the vowel sound is the filler 'uh' sound like in "verse"
+            </li>
+            <li>"Utkarsh":  so "Utkarsh" assonates with "soot-verse"
+            </li>
+        
+            <li>"Gaur": the 'au' sound is just like in "maul". So "Gaur" is just "Igor" without the "I".
+            </li>
+            </ul> 
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    </body>
+</html>

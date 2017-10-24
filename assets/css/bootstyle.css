@@ -1,0 +1,33 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Encode Sans', sans-serif;
+}
+
+h1{
+    margin-bottom: 40px;
+}
+
+.row{
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    min-height: 100%;
+    margin-bottom: -150px;
+}
+
+.footer{
+
+    height: 150px;
+    
+    /* height: 180px; 
+    position: fixed; 
+    bottom:0%;
+    width:100%;  */
+
+    
+}

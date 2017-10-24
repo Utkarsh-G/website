@@ -1,0 +1,184 @@
+Sep Week 1 Dev notes for site
+
+- make the text on page 1 one-third of total page width
+	(either manually or using bootstrap)
+	
+	- DONE
+	
+- add navbar to be able to switch between pages.
+	- DONE for the first page
+	
+- Add bootcamp ref to other pages, then copy navbar there too.
+	- DONE
+	
+- Pick a colour palette
+	- yellow + blue-purple + red-purple
+	
+- Try a combo of colours
+	- yellow background, red-purple top banner
+	- then darker (orangish) yellow with marine blue
+	
+	- DONE
+	
+- fix the navbar text so it is readable colour
+
+	- DONE
+	
+- Make alternative colour scheme (then add a button to switch)
+
+	- Button added
+	- Colour added
+	- DONE
+	
+- Desiderata for site: 
+	- button at bottom of front page saying 'How do you pronounce your name?' that brings up pronounciations text
+	- interactable graphic showing skill breakdown in front page
+	- interactable graphic per skill / project
+	- put the "chance colour scheme" button somewhere more streamlined
+	- put more games up
+	- keep in mind shadow effects (check landing page code-along for deets)
+	
+- Review stuff, including paper.js and jquery
+
+
+[Oct 20]
+
+Goal for today: formalize in Canvas the segmenting making process & try hosting site on uni server.
+
+[Oct 21]
+
+same as above
+
+            var c1 = new Point(86, 50);
+            var b1 = new Point(57, 81);
+            var a1 = new Point(17, 98);
+
+            var xvalue = Math.floor(150*Math.cos(30 * Math.PI/180));
+
+            var c2 = new Point(xvalue, 75);
+            var b2 = new Point(85, 121);
+            var a2 = new Point(25, 147);
+
+            var path = new Path.Arc(c1, b1, a1);
+            path.strokeColor = 'black';
+           
+            var path = new Path.Arc(c2, b2, a2);
+            path.strokeColor = 'black';
+			
+[Oct 23]
+
+Make the visual for skill division: 
+
+1. Make one arc by using formulae
+2. Make as many arcs as skills to highlight
+3. Animate it
+4. figure out on-hover
+5. add on-hover effect (by toggling class?)
+
+1. DONE
+
+
+2. DONE   
+			
+3. DONE
+
+            var centre = new Point(300,145);
+
+            var visualDescriptors = [
+            {
+                offsetAngle: 150,
+                arcAngle: 280,
+                radius: 30,
+                colour: "yellow",
+                width: 30
+            },
+            {
+                offsetAngle: 50,
+                arcAngle: 80,
+                radius: 70,
+                colour: "green" 
+            },
+            {
+                offsetAngle: 170,
+                arcAngle: 80,
+                radius: 70,
+                colour: "green" 
+            },
+            {
+                offsetAngle: 290,
+                arcAngle: 80,
+                radius: 70,
+                colour: "green" 
+            },
+            {
+                offsetAngle: 100,
+                arcAngle: 90,
+                radius: 110,
+                colour: "red",
+                width: 30 
+            },
+            {
+                offsetAngle: 230,
+                arcAngle: 30,
+                radius: 100,
+                colour: "red" 
+            },
+            {
+                offsetAngle: 300,
+                arcAngle: 30,
+                radius: 100,
+                colour: "red" 
+            }];
+
+            var allPaths = [];
+
+            function visualize(myObj)
+            {
+                var fromX = Math.floor(myObj.radius * Math.cos(myObj.offsetAngle * Math.PI/180));
+                var fromY = Math.floor(myObj.radius * Math.sin(myObj.offsetAngle * Math.PI/180));
+    
+                var from = new Point(fromX, fromY);
+                
+                var throughX = Math.floor(myObj.radius * Math.cos((myObj.offsetAngle + myObj.arcAngle/2) * Math.PI/180));
+                var throughY = Math.floor(myObj.radius * Math.sin((myObj.offsetAngle + myObj.arcAngle/2) * Math.PI/180));
+    
+                var through = new Point(throughX, throughY);
+    
+                var toX = Math.floor(myObj.radius * Math.cos((myObj.offsetAngle + myObj.arcAngle) * Math.PI/180));
+                var toY = Math.floor(myObj.radius * Math.sin((myObj.offsetAngle + myObj.arcAngle) * Math.PI/180));
+    
+                var to = new Point(toX, toY);
+    
+                var path1 = new Path.Arc(from + centre, through + centre, to + centre);
+                path1.strokeColor = myObj.colour;
+
+                if(myObj.width)
+                {
+                    path1.strokeWidth = myObj.width;
+                }
+                else
+                {
+                    path1.strokeWidth = 20;
+                }
+
+                allPaths.push(path1);
+                
+            }
+
+            visualDescriptors.forEach(visualize);
+
+            function onFrame(event)
+            {
+                allPaths[0].rotate(1.2, centre);
+                allPaths[1].rotate(-1, centre);
+                allPaths[2].rotate(-1, centre);
+                allPaths[3].rotate(-1, centre);
+                allPaths[4].rotate(0.8, centre);
+                allPaths[5].rotate(0.8, centre);
+                allPaths[6].rotate(0.8, centre);
+            }
+
+			
+[Oct 24]
+
+Gitify website folder, and upload to github
