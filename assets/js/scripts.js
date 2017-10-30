@@ -16,7 +16,6 @@ $(document).ready(function () {
     $(document).ready(init);
     
     function init(jQuery) {
-      //$("#animationToggle").click(window.globals.paperClicked);
       $("#myCanvas").mouseenter(window.globals.canvasEnter);
       $("#myCanvas").mouseleave(window.globals.canvasLeave);
     }

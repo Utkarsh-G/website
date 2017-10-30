@@ -86,12 +86,12 @@ canvas {
     background-color: transparent;
     margin: 0;
 
-    border: 2px solid rgb(29, 230, 150);
+    /* border: 2px solid rgb(29, 230, 150);  */
 }
 
-.col-md-6 {
+ /* .col-md-6 {
     border: 2px solid rgb(29, 230, 150);
-}
+}  */
 
 li{
     font-size: 2.0rem;
@@ -132,4 +132,9 @@ li{
 
     height: 100px;
 
+}
+
+.largeIcon{
+    font-size: 25rem;
+    text-align: center;
 }

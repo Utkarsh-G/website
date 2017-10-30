@@ -218,3 +218,7 @@ function onMouseDown(event)
                 }
 
             }
+	
+Oct 30:
+
+- next step: find some sort of icons (images, graphics) for skills page and projects
