@@ -182,3 +182,39 @@ Make the visual for skill division:
 [Oct 24]
 
 Gitify website folder, and upload to github
+
+- Gitification DONE
+
+- Upload DONE
+
+[Oct 25]
+
+stop on hover, done
+
+Next up: 
+
+write all skills and span them
+get them to highlight when hover over corresponding gear. 
+then draw the line using path stuff. 
+
+not working (paper hover). Can't even get console logs from it. 
+
+Next: either debug using paper mouse events + colour change, or with console log js message as accessed by paperscript
+
+first one works:
+
+function onMouseDown(event)
+            {
+                console.log("clicked");
+
+                if (allPaths[0].contains(event.point)){
+                    allPaths[0].strokeColor = 'black';
+                    
+                }
+                else
+                {
+                    allPaths[0].strokeColor = 'green';
+                    
+                }
+
+            }

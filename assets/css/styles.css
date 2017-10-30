@@ -105,6 +105,24 @@ li{
     margin-bottom: 20px;
 }
 
+.greenText{
+    background-color: green;
+    color: white;
+    text-transform: uppercase;
+}
+
+.redText{
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+}
+
+.yellowText{
+    background-color: yellow;
+    color: black;
+    text-transform: uppercase;
+}
+
 .wrapper{
     min-height: 100%;
     margin-bottom: -150px;

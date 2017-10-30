@@ -19,7 +19,7 @@
         <script type="text/paperscript" canvas="myCanvas">
    
             var centre = new Point(300,145);
-            var animationOn = false;
+            var animationOn = true;
 
             var visualDescriptors = [
             {
@@ -122,6 +122,105 @@
                     allPaths[6].rotate(0.8, centre);
                 }
             }
+
+            
+
+            // JavaScript Interop
+            globals.paperClicked = internalClicked;
+            globals.canvasEnter = hoverAnimation;
+            globals.canvasLeave = clearHover;
+            
+            function internalClicked() {
+                if (animationOn)
+                {
+                    animationOn = false;
+                }
+                else 
+                {
+                    animationOn = true;
+                }
+                
+            }
+
+            allPaths[0].onMouseEnter = function(event){
+                this.strokeColor = 'black';
+                $("#learner").toggleClass("yellowText");
+            }
+
+            allPaths[0].onMouseLeave = function(event){
+                this.strokeColor = 'yellow';
+                $("#learner").toggleClass("yellowText");
+            }
+
+            allPaths[1].onMouseEnter = function(event){
+                this.strokeColor = 'black';
+                $("#designer").toggleClass("greenText");
+            }
+
+            allPaths[1].onMouseLeave = function(event){
+                this.strokeColor = 'green';
+                $("#designer").toggleClass("greenText");
+            }
+
+            allPaths[2].onMouseEnter = function(event){
+                this.strokeColor = 'black';
+                $("#creator").toggleClass("greenText");
+            }
+
+            allPaths[2].onMouseLeave = function(event){
+                this.strokeColor = 'green';
+                $("#creator").toggleClass("greenText");
+            }
+
+            allPaths[3].onMouseEnter = function(event){
+                this.strokeColor = 'black';
+                $("#toastmaster").toggleClass("greenText");
+            }
+
+            allPaths[3].onMouseLeave = function(event){
+                this.strokeColor = 'green';
+                $("#toastmaster").toggleClass("greenText");
+            }
+
+            allPaths[4].onMouseEnter = function(event){
+                this.strokeColor = 'black';
+                $("#problemSolver").toggleClass("redText");
+            }
+
+            allPaths[4].onMouseLeave = function(event){
+                this.strokeColor = 'red';
+                $("#problemSolver").toggleClass("redText");
+            }
+
+            allPaths[5].onMouseEnter = function(event){
+                this.strokeColor = 'black';
+                $("#biking").toggleClass("redText");
+            }
+
+            allPaths[5].onMouseLeave = function(event){
+                this.strokeColor = 'red';
+                $("#biking").toggleClass("redText");
+            }
+
+            allPaths[6].onMouseEnter = function(event){
+                this.strokeColor = 'black';
+                $("#fiction").toggleClass("redText");
+            }
+
+            allPaths[6].onMouseLeave = function(event){
+                this.strokeColor = 'red';
+                $("#fiction").toggleClass("redText");
+            }
+            
+            function hoverAnimation() {
+                animationOn = false;                
+            }
+
+            function clearHover(){
+                animationOn = true;
+            }
+
+            
             
         </script>
     </head>
@@ -173,7 +272,11 @@
         <div class="col-md-6">        
         <p> My name is Utkarsh Gaur.*  </p>
         
-        <p> I am a Computer Engineer by training. By practice, well, let's just say it goes well beyond Computer Engineering. 4 parts Problem Solver, 3 parts Toastmaster, 3 parts Designer and Creator, then throw in a dash of biking, and a hearty portion of foodie-tendencies, and you start making something that resembles me. </p>
+        <p> I am a Computer Engineer by training. By practice, well, let's just say it goes well beyond Computer Engineering. 
+            5 parts <span id="problemSolver"> Problem Solver</span>, 3 parts 
+            <span id="designer">Designer</span>, <span id="creator">Creator</span>, and <span id="toastmaster">Toastmaster</span>, then throw in a dash of 
+            <span id="biking">biking</span>, with a hearty love of <span id="fiction">reading fiction</span> and you start making something that resembles me. 
+            Underlining it all is the desire to be <span id="learner">always learning</span>. </p>
 
         <p> Currently I'm focusing on being a game and web developer. No big deal, right? Feel free to explore the site to get a better idea of my experiences and interests.</p>
         </div>
