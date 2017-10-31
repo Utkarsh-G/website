@@ -126,21 +126,9 @@
             
 
             // JavaScript Interop
-            globals.paperClicked = internalClicked;
             globals.canvasEnter = hoverAnimation;
             globals.canvasLeave = clearHover;
             
-            function internalClicked() {
-                if (animationOn)
-                {
-                    animationOn = false;
-                }
-                else 
-                {
-                    animationOn = true;
-                }
-                
-            }
 
             allPaths[0].onMouseEnter = function(event){
                 this.strokeColor = 'black';
