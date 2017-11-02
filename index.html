@@ -18,7 +18,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <script type="text/paperscript" canvas="myCanvas">
    
-            var centre = new Point(300,145);
+            var centre = new Point(130, 130);
             var animationOn = true;
 
             var visualDescriptors = [
@@ -233,9 +233,9 @@
                     <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
                     <li><a href="skilltree.html">Skills</a></li>
                     <li><a href="bosses.html">Projects</a></li>
-                    <li><a href="XP.html">Professional Experience</a></li>    
+                    <li><a href="XP.html">Career</a></li>    
                     <li><a href="ingamechat.html">Contact</a></li>  
-                    <li><a href="Games/xmy/index.html" target="_blank">Game Link</a></li>     
+                    <!-- <li><a href="Games/xmy/index.html" target="_blank">Game Link</a></li>      -->
                 </ul>
                 <!--
                 <ul class="nav navbar-nav navbar-right">
@@ -252,7 +252,7 @@
         <![endif]-->
 
         <div class="container wrapper">
-        <button type="button" class="btn btn-default" id="colourFlip">Change Colour Scheme</button>
+        <!-- <button type="button" class="btn btn-default" id="colourFlip">Change Colour Scheme</button> -->
         <div class="row">
         <h1>Oh hey, you found me!</h1>
         </div>
@@ -262,7 +262,7 @@
         
         <p> I am a Computer Engineer by training. By practice, well, let's just say it goes well beyond Computer Engineering. 
             5 parts <span id="problemSolver"> Problem Solver</span>, 3 parts 
-            <span id="designer">Designer</span>, <span id="creator">Creator</span>, and <span id="toastmaster">Toastmaster</span>, then throw in a dash of 
+            <span id="designer">Designer</span>, <span id="creator">Coder</span>, and <span id="toastmaster">Toastmaster</span>, then throw in a dash of 
             <span id="biking">biking</span>, with a hearty love of <span id="fiction">reading fiction</span> and you start making something that resembles me. 
             Underlining it all is the desire to be <span id="learner">always learning</span>. </p>
 
@@ -270,14 +270,13 @@
         </div>
         <div class="col-md-6"> 
         <!-- <canvas id="myCanvas" resize="true"></canvas> -->
-        <canvas id="myCanvas" resize="true"></canvas>
+        <canvas id="myCanvas" resize="false"></canvas>
         </div>
-    </div>
         </div>
+
         
-        <div class="container">
-        <div class="row footer">
-        <div class="col-md-6 col-sm-10" >  
+        <div class="row lowerOnPage">
+        <div class="col-md-6" >  
         <button type="button" class="btn btn-default" id="pronounce">* "Am I saying your name correctly?"</button>
         <div id="pronounceText">
         <p> *People get a bit of pronounciation anxiety when they have to say my name out loud. I'm quite chill about it though. You can pronounce it any way you like. Not even my closest friends have consensus on how to say it.
@@ -299,7 +298,10 @@
         </div>
         </div>
         </div>
-        
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/scripts.js"></script>
     </body>
 </html>

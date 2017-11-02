@@ -222,3 +222,39 @@ function onMouseDown(event)
 Oct 30:
 
 - next step: find some sort of icons (images, graphics) for skills page and projects
+
+DONE
+
+Oct 31:
+
+temporary hosting up. list of issues:
+
+burger isn't working,
+not optimization for mobile
+contact form goes nowhere
+contact form font is all wrong
+games not up (duh)
+XP page needs to hide some of the info
+
+Nov 1:
+
+For mobile optimization: 
+- fix the burger
+- adjust skills page for consistency in mobile
+	- resize icons according to screensize
+	- pull / push to rearrange icon-text
+- work on front page
+
+burger fixed. new issue:
+- standardize (and shrink?) photos in bosses page to be mobile appropriate
+- adjust "pronounciation" box so that it is in the layout properly
+
+
+Staged changes: 
+	- burger interactable
+	- thumbnail'd pictures and set their background transparent
+	- skill tree layout fixed, hopefully also on mobile
+	- changed Professional Experience to Career for better layouting.
+	- changes to front page to make it ... better? yeah, sort of. good (ish) layout now.
+
+I wonder if I can get an Icon on the tab heading.

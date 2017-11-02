@@ -82,16 +82,18 @@ p{
 
 canvas {
     width: 100%;
+    min-width: 300px;
     height: 100%;
+    min-height: 260px;
     background-color: transparent;
     margin: 0;
 
-    /* border: 2px solid rgb(29, 230, 150);  */
+    /* border: 2px solid rgb(29, 230, 150);   */
 }
 
- /* .col-md-6 {
+/* .col-md-6 {
     border: 2px solid rgb(29, 230, 150);
-}  */
+} */
 
 li{
     font-size: 2.0rem;
@@ -134,7 +136,39 @@ li{
 
 }
 
+.thumbnail{
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
 .largeIcon{
     font-size: 25rem;
     text-align: center;
 }
+
+@media only screen and (max-width : 768px){
+    .largeIcon{
+        font-size: 7rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 992px){
+    .largeIcon{
+        font-size: 10rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 480px){
+    .largeIcon{
+        font-size: 5rem;
+        text-align: center;
+    }
+
+}
+
+
+  .lowerOnPage{
+      margin-top: 50px;
+  }
