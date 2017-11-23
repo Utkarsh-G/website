@@ -258,3 +258,62 @@ Staged changes:
 	- changes to front page to make it ... better? yeah, sort of. good (ish) layout now.
 
 I wonder if I can get an Icon on the tab heading.
+
+anyway, time to commit the mobile optimization and burger.
+
+feedback from parents:
+- add image indentifier: check if can add image to navbar
+- justify on both sides of paragraph
+- move icons on skillpage to vertical middle (maybe even horizontal middle)
+- grammar: days instead of day. 
+- caption embot image
+
+feedback from Andrew:
+
+- attach normal resume in pdf format
+- include buzzwords (especially frameworks)
+- (maybe link to linkdin)
+- in home page: write what you are seeking (not just doing)
+- (Angular.js instead of complaining about js?)
+- less woohoo-ey, more actual words
+- swap programming and Game dev sections, with emphasis on programming
+
+feedback from mike sutton:
+
+- change colour spinner
+- remove "stuff" and bracketed parts, for the sake of formality.
+
+from heech:
+- linkedin, git links. pdf of resume.
+- make navigation easier on mobile.
+
+from Mike wang:
+- bullets or highlights to pop up key phrases
+
+Staged changes:
+- added icons with links for linkedin and github
+
+
+
+[Nov 12]
+
+- Big next changes to make: 
+	change colour of spinners
+	tighten language + buzzwords
+	in home page write also what you are seeking 
+	add image indentifier of self
+	justify on both sides of paragraph
+	move icons on skillpage to vertical middle (maybe even horizontal middle)
+	grammar: days instead of day. 
+	caption embot image
+	
+Find the long home (test both services)
+
+Nov 14: 
+
+list of completed tasks:
+	- some language tightened up
+	- wrote what I am seeking
+	justified on both sides.
+	icon centered 
+	captioned image
