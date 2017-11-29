@@ -18,7 +18,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <script type="text/paperscript" canvas="myCanvas">
    
-            var centre = new Point(130, 130);
+            var centre = new Point(170, 130);
             var animationOn = true;
 
             var visualDescriptors = [
@@ -257,7 +257,12 @@
         <h1>Oh hey, you found me!</h1>
         </div>
         <div class="row">
-        <div class="col-md-6">        
+        <div class="col-md-6 col-md-push-6">
+                <div class="thumbnail">
+            <img class="portrait" src="Caricature3.png">
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-6">        
         <p> My name is Utkarsh Gaur.*  </p>
         
         <p> I am a Computer Engineer by training. By practice, well, let's just say it goes well beyond Computer Engineering. 
@@ -269,13 +274,18 @@
         <p> Currently I'm focusing on being a game and web developer. I would like to bring my skill and experience to an agile-oriented team.
             Feel free to explore the site to get a better idea of my experiences and interests.</p>
         </div>
-        <div class="col-md-6"> 
-        <!-- <canvas id="myCanvas" resize="true"></canvas> -->
-        <canvas id="myCanvas" resize="false"></canvas>
-        </div>
+        
+        
         </div>
         <div class="row">
+                <div class="col-sm-6"> 
+                    
+                        <!-- <canvas id="myCanvas" resize="true"></canvas> -->
+                        <canvas id="myCanvas" resize="false"></canvas>
+
+                        </div>
             <div class="col-sm-4">
+                    <div id="linksDiv">
                 <a target="_blank" href="https://github.com/Utkarsh-G">
                 <img src="GitHubMark.png">
                 </a> &nbsp &nbsp
@@ -286,6 +296,7 @@
                 <a target="_blank" href="assets/UtkarshGaurResume2017.pdf">
                 <img class="iconimg" src="VerticalClipIcon.png">
                 </a>
+                    </div>
             </div>
         </div>
         

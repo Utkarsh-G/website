@@ -84,19 +84,40 @@ p{
 }
 
 canvas {
-    width: 100%;
+    /* width: 100%;
     min-width: 300px;
     height: 100%;
-    min-height: 260px;
-    background-color: transparent;
-    margin: 0;
+    min-height: 260px; */
 
-    /* border: 2px solid rgb(29, 230, 150);   */
+    width: 300px;
+
+    height: 260px;
+    background-color: transparent;
+    /* margin: 0; */
+    text-align: center;
+    /* margin: auto; */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    /* border: 2px solid purple;   */
 }
 
-/* .col-md-6 {
+#linksDiv{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* border: 2px solid red;     */
+}
+
+ /* .col-md-6 {
     border: 2px solid rgb(29, 230, 150);
-} */
+}*/ 
+
+.col-sm-4{
+    /* border: 2px solid rgb(29, 230, 150);  */
+    /* padding-top: 10px;    */
+}
 
 li{
     font-size: 2.0rem;
@@ -157,9 +178,16 @@ li{
 
 
 
+
 .iconimg{
     height:60px;
     width:60px;
+}
+
+.portrait{
+    width: 200px;
+    float: left;
+    /* padding-left: 30px; */
 }
 
 @media only screen and (max-width : 768px){
@@ -174,6 +202,12 @@ li{
         font-size: 10rem;
         text-align: center;
     }
+
+    .portrait{
+        width: 200px;
+        /* float: left; */
+        padding : 20px;
+    }
 }
 
 @media only screen and (max-width : 480px){
@@ -184,6 +218,11 @@ li{
 
 }
 
+@media only screen and (min-width : 992px){
+    .floatMidLeft{
+                padding-left: 51%;
+    }
+}
 
   .lowerOnPage{
       margin-top: 50px;
@@ -194,3 +233,4 @@ li{
     font-size: 1.5rem;
     text-align: center;
 }
+
