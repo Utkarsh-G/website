@@ -107,16 +107,6 @@ canvas {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    /* border: 2px solid red;     */
-}
-
- /* .col-md-6 {
-    border: 2px solid rgb(29, 230, 150);
-}*/ 
-
-.col-sm-4{
-    /* border: 2px solid rgb(29, 230, 150);  */
-    /* padding-top: 10px;    */
 }
 
 li{
@@ -132,21 +122,20 @@ li{
 }
 
 .greenText{
-    background-color: green;
-    color: white;
+    background-color: rgb(29, 230, 150);
+    color: black;
     text-transform: uppercase;
 }
 
 .redText{
-    background-color: red;
-    /* background-color: rgb(254,195,105); */
+    background-color: #ff3e32;
     color: white;
     text-transform: uppercase;
 }
 
 .yellowText{
-    background-color: yellow;
-    color: black;
+    background-color: #30308B;
+    color: white;
     text-transform: uppercase;
 }
 
@@ -168,8 +157,6 @@ li{
 
 .largeIcon{
     font-size: 25rem;
-    /* text-align: center; */
-    /* vertical-align: middle; */
 }
 
 .iconCol{

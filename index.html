@@ -21,50 +21,54 @@
             var centre = new Point(170, 130);
             var animationOn = true;
 
+            var myGreen = '#1de696';
+            var myRed = '#ff3e32';//'#ffa500';
+            var myYellow = '#30308B';
+
             var visualDescriptors = [
             {
                 offsetAngle: 150,
                 arcAngle: 280,
                 radius: 30,
-                colour: "yellow",
+                colour: myYellow,
                 width: 30
             },
             {
                 offsetAngle: 50,
                 arcAngle: 80,
                 radius: 70,
-                colour: "green" 
+                colour: myGreen 
             },
             {
                 offsetAngle: 170,
                 arcAngle: 80,
                 radius: 70,
-                colour: "green" 
+                colour: myGreen 
             },
             {
                 offsetAngle: 290,
                 arcAngle: 80,
                 radius: 70,
-                colour: "green" 
+                colour: myGreen 
             },
             {
                 offsetAngle: 100,
                 arcAngle: 90,
                 radius: 110,
-                colour: "red",
+                colour: myRed,
                 width: 30 
             },
             {
                 offsetAngle: 230,
                 arcAngle: 30,
                 radius: 100,
-                colour: "red" 
+                colour: myRed 
             },
             {
                 offsetAngle: 300,
                 arcAngle: 30,
                 radius: 100,
-                colour: "red" 
+                colour: myRed 
             }];
 
             var allPaths = [];
@@ -87,7 +91,7 @@
                 var to = new Point(toX, toY);
     
                 var path1 = new Path.Arc(from + centre, through + centre, to + centre);
-                path1.strokeColor = myObj.colour;
+                path1.strokeColor = myObj.colour; //'#1de696'; //myObj.colour;
 
                 if(myObj.width)
                 {
@@ -136,7 +140,7 @@
             }
 
             allPaths[0].onMouseLeave = function(event){
-                this.strokeColor = 'yellow';
+                this.strokeColor = myYellow;
                 $("#learner").toggleClass("yellowText");
             }
 
@@ -146,7 +150,7 @@
             }
 
             allPaths[1].onMouseLeave = function(event){
-                this.strokeColor = 'green';
+                this.strokeColor = myGreen;
                 $("#designer").toggleClass("greenText");
             }
 
@@ -156,7 +160,7 @@
             }
 
             allPaths[2].onMouseLeave = function(event){
-                this.strokeColor = 'green';
+                this.strokeColor = myGreen;
                 $("#creator").toggleClass("greenText");
             }
 
@@ -166,7 +170,7 @@
             }
 
             allPaths[3].onMouseLeave = function(event){
-                this.strokeColor = 'green';
+                this.strokeColor = myGreen;
                 $("#toastmaster").toggleClass("greenText");
             }
 
@@ -176,7 +180,7 @@
             }
 
             allPaths[4].onMouseLeave = function(event){
-                this.strokeColor = 'red';
+                this.strokeColor = myRed;
                 $("#problemSolver").toggleClass("redText");
             }
 
@@ -186,7 +190,7 @@
             }
 
             allPaths[5].onMouseLeave = function(event){
-                this.strokeColor = 'red';
+                this.strokeColor = myRed;
                 $("#biking").toggleClass("redText");
             }
 
@@ -196,7 +200,7 @@
             }
 
             allPaths[6].onMouseLeave = function(event){
-                this.strokeColor = 'red';
+                this.strokeColor = myRed;
                 $("#fiction").toggleClass("redText");
             }
             
@@ -266,7 +270,7 @@
         <p> My name is Utkarsh Gaur.*  </p>
         
         <p> I am a Computer Engineer by training. By practice, well, let's just say it goes well beyond Computer Engineering. 
-            5 parts <span id="problemSolver"> Problem Solver</span>, 3 parts 
+            5 parts <span id="problemSolver"> Problem Solver</span>, 3 parts each of 
             <span id="designer">Designer</span>, <span id="creator">Coder</span>, and <span id="toastmaster">Toastmaster</span>, then throw in a dash of 
             <span id="biking">biking</span>, with a hearty love of <span id="fiction">reading fiction</span> and you start making something that resembles me. 
             Underlining it all is the desire to be <span id="learner">always learning</span>. </p>
