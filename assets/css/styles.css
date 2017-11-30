@@ -134,7 +134,7 @@ li{
 }
 
 .yellowText{
-    background-color: #30308B;
+    background-color: purple;
     color: white;
     text-transform: uppercase;
 }
@@ -148,6 +148,10 @@ li{
 
     height: 100px;
 
+}
+
+a{
+    color: purple;
 }
 
 .thumbnail{
@@ -212,7 +216,7 @@ li{
 }
 
   .lowerOnPage{
-      margin-top: 50px;
+      margin-top: 70px;
   }
 
   .caption{
