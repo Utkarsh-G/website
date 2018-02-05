@@ -1,0 +1,20 @@
+20 - 1 - 18
+
+Carry over from last year: 
+Now that the site is up and running (and being worked upon), what do I want to do next?
+
+- Turn "career" stories into clickable buttons. 
+- Add better email (which will require backend coding)
+- Maybe games in the future? node.js seems like the bigger focus.
+- Make labels for accessibility
+
+Next step: turn "career" stories into clickable buttons.
+
+
+5 - 2 - 18
+
+order of changes: website, resume, sign up for scene, download carrot
+
+Carrot focus: 
+
+Changes to website - 

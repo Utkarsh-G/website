@@ -317,3 +317,14 @@ list of completed tasks:
 	justified on both sides.
 	icon centered 
 	captioned image
+
+Dec 12:
+
+Now that the site is up and running (and being worked upon), what do I want to do next?
+
+- Turn "career" stories into clickable buttons. 
+- Add better email (which will require backend coding)
+- Maybe games in the future? node.js seems like the bigger focus.
+- Make labels for accessibility
+
+
